@@ -1,0 +1,23 @@
+% Definir la función
+f1 = @(x) ((x - 1) * 1.25) / 2.5;
+
+% Crear un vector de puntos x para la gráfica
+x_values = linspace(-10, 10, 1000); % Puedes ajustar el rango de -10 a 10 según tus necesidades
+
+% Evaluar la función en los puntos x
+y_values = f1(x_values);
+
+% Graficar la función
+figure;
+plot(x_values, y_values, 'b-', 'LineWidth', 2);
+xlabel('x');
+ylabel('f_1(x)');
+title('Gráfica de f_1(x)');
+grid on;
+
+% Evaluar la función en x = 4.5
+x_eval = 4.5;
+y_eval = f1(x_eval);
+
+% Mostrar el resultado
+disp(['El valor de f_1(4.5) es: ', num2str(y_eval)]);
